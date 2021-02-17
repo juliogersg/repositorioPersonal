@@ -1,0 +1,62 @@
+<!--Html es un lenguaje para crear la estructura de una web-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Parte no visible o de configuracion de la pagina-->
+    <title>
+        <!--Especifica el titulo del documento-->
+        Mi primera web
+    </title>
+    <meta name="keywords" content="cursos de programacion, javascript, turtoriales, css" />
+    <meta name="description" content="CodiGo - aprende a programar en cursos de corta duracion" />
+    <!--la etiqueta meta no tiene cierre. Se cierra en la misma linea. Meta sirve para el SEO (salir primero en google)-->
+</head>
+
+<!--Todas las etiquetas estructurales (incluido el div) son etiquetas bloqueantes (ocupan el 100% del ancho del navegador)-->
+
+<body>
+    <!--Parte visible o lo que el usuario final ve-->
+    <header>
+        <h1>CodiGo</h1>
+        <!--Para el SEO, una pagina html puede y debe tener un solo <h1>-->
+    </header>
+    <nav>
+        Cursos - Conocenos - Portafolio - Iniciar sesion
+    </nav>
+    <main>
+        <section>
+            <p>Gran lazamiento de &nbsp; <span>VueJS</span></p>
+            <!--SPAN sirve para resaltar una palabra-->
+            <!-- &nbsp; es una entidad de html que permite insertar un espacio-->
+            <p>
+                Aprovecha la oferta <br/> <strong>10%</strong>
+                <!-- br para saltar linea, strong es para negrita -->
+            </p>
+            <pre>
+                let x = 9;
+                {
+                    nombre:"carlos"
+                }
+            </pre>
+            <!-- pre se inserta un parrafo que respeta indentation-->
+        </section>
+        <!--Existen etiquetas en linea (como span) y bloqueantes (como estructurales)-->
+        <!--  -->
+        <aside>
+            <h2>Buscador de cursos</h2>
+            <hr/>
+            <em>* Requisito estar loggeado</em>
+            <!-- hr agrega una barrita y em pone en cursiva -->
+        </aside>
+    </main>
+    <footer>
+        <p>
+            CodiGo - <small>Todos los derechos reservados</small>
+        </p>
+        <!-- small hace el texto mas pequeno -->
+    </footer>
+</body>
+
+</html>
+<!--Las etiquetas tienen una apertura y un cierre-->
