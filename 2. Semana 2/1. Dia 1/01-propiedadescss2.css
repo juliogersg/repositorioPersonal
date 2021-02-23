@@ -1,0 +1,33 @@
+.header__title{
+    text-align: center;
+    /* color es el color del fondo, no del texto */
+    color: #222222;
+    /* Formato de color hexadecimal */
+}
+
+.subtitulo{
+    color: rgb(200, 50, 0);
+    /* Formato de color rgb */
+}
+
+.cuadrado{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 255, 255,0.1);
+    /* a de alfa. Indica la transparencia. Se colocan valores de 0 a 1 */
+}
+
+.cuadrado:nth-child(2){
+    background-color: hsl(180, 100%, 40%);
+    /* Formato de color hsl (grados, porcentaje, porcentaje) */
+}
+.cuadrado:nth-child(3){
+    background-color: hsl(180, 100%, 30%);
+}
+.cuadrado:nth-child(4){
+    background-color: hsl(180, 100%, 20%);
+}
+
+body{
+    background-color: lightcoral;
+}

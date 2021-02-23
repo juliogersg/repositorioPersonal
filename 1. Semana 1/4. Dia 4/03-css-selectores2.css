@@ -36,4 +36,53 @@ a {
   color: blue;
 }
 
+.boton_navegacion{
+  text-decoration: none;
+  font-family: cursive;
+  color: yellow;
+}
 
+button.boton_navegacion{
+  /* Todas las etiquetas "button" que tengan la clase boton_navegacion */
+  color: royalblue;
+}
+
+.boton_navegacion.activo{
+  box-shadow: #bbb 0px 0px 20px;
+}
+
+#miFooter{
+  /* NO usar id para css. Es la peor opcion. */
+  background-color: #ccc;
+}
+
+article p{
+  /* Todos los parrafos que sean descendientes de un article */
+  color: #444;
+  text-indent: 10px;
+}
+
+/* Es diferente usar coma y punto!!! No olvidar */
+
+article.articulo p span{
+  /* Todos los span que sean descendientes de un parrafo que a su vez sea descendiente de un article que tenga la clase "articulo" */
+}
+
+section > p{
+  /* Todos lo parrafos que sean descendientes de primer nivel (hijos) de un section */
+  font-size: 13px;
+  color: #bbb;
+}
+
+.publicidad_imagen + figcaption{
+  /* El figcaption proximo directo que sea hermano directo de un elemento con clase publicidad_imagen */
+  /* Solo afecta al figcaption. Debe ser un hermano inferior*/
+  font-style: italic;
+  font-size: 12px;
+}
+
+#miFooter a ~ button{
+  /* Todos los buttons que sean hermanos siguientes de a y estoy hijos de un elemento de id miFooter */
+  border-radius: 6px;
+  background-color: salmon;
+}

@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* El body no tienen altura! Adopta la altura de las etiquetas hijas */
+    background: linear-gradient(#234524,#423425);
+    border: 1px solid yellow;
+    /* height: 100vh; */
+    /* vh = viewport height
+    100vh significa que ocupe el 100% del viewport height
+    presenta un problema cuando aumenta el tamano del body */
+    min-height: 100vh;
+    /* Body tomo como minimo el tamano del 100% viewport height
+    Resuelve problema para contenido muy grande o pequeno
+    Si tu contenido exige mas altura, puedes aumentar tu medida */
+}
+
+.parrafo{
+    background-color: yellowgreen;
+    max-width: 500px;
+}

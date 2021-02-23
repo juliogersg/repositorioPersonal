@@ -6,7 +6,12 @@ body{
 
 .header__titulo{
   /*tipo de letra*/
-  font-family: cursive, sans-serif
+  text-align: center;
+  font-family: cursive, sans-serif;
+  letter-spacing: 20px; 
+  /* letter-spacing es espaciado entre letra y letra */
+  word-spacing: 50px;
+  /* word-spacing espaciado entre palabra y palabra */
 }
 
 .main__titulo{
@@ -23,4 +28,12 @@ body{
   /*shorthand properties: propiedades que combinan varias en una sola*/
   /*font: font-style font-weight font-size font-family*/
   font: normal 500 14px "Raleway", sans-serif;
+  line-height: 25px;
+}
+.main__span{
+  text-align: center;
+  /* No funciona porque span no es de bloque. Lo centra en un espacio pequeno y no se nota */
+}
+a{
+  text-decoration: none;
 }
