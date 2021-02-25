@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(45deg, #990000,#7222b4);
+    min-height: 100vh;
+    padding-top: 60px;
+}
+
+header{
+    height: 60px;
+    width: 100vw;
+    background: #4e0a4e;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+button{
+    /* FAB   Float action button */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+    /* El fixed realiza un posicionamiento respecto a la pantalla
+    Ya no depende del padre!!!!
+    al usar fixed hay que settear height y width si o si */
+    bottom: 20px;
+    right: 20px;
+}

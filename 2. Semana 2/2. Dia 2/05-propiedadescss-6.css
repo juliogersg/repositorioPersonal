@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ececec;
+}
+
+main{
+    padding-left: 100px;
+}
+
+.header{
+    height: 60px;
+    box-shadow: 0px 4px 12px #bbb;
+    background-color: white;
+    margin-bottom: 50px;
+    /* box-shadow: [ejex]  [ejey]  [desenfoque]  [color]; */
+}
+
+.formulario, .card {
+    width: 400px;
+    height: 500px;
+    margin: 100px auto 0px auto;
+    background-color: white;
+    box-shadow: 0px 0px 20px #aaa ;
+    border-radius: 8px;
+    border: 1px #ccc;
+    transition: all 0.5 ease-in;
+}
+
+.formulario:hover{
+    box-shadow: 0px 0px 7px #aaa;
+}
+
+.card{
+    box-shadow: inset 0px 0px 20px #aaa;
+    /* Tendencia de neomorfismo */
+    overflow: hidden;
+}
+
+.btn-neo{
+    background-color: #ececec;
+    border: none;
+    outline: none;
+    height: 50px;
+    width: 50px;
+    /* El boton es un elemento inline-block, permite settear height y width
+    Se puede colocar tamano en porcentaje (representa el porcentaje del contenedor o padre) */
+    border-radius: 50%;
+    /* 50% hace que el radio sea la mitad del boton y lo hace redondo */
+    /* box-shadow: 0px 0px 20px #aaa; */
+    cursor: pointer;
+    transition: all 0.5s ease-in;
+    /* transition: [propiedad en la que va funcionar] [tiempo] [funcion de tiempo]
+    transition afecta a las caracteristicas que pueden ser computables
+    no afecta el fondo porque los gradientes son imagenes */
+    border-radius: 50%;
+    background: linear-gradient(145deg, #fdfdfd, #d4d4d4);
+    box-shadow:  9px 9px 16px #bababa,
+                -9px -9px 16px #ffffff;
+}
+
+.btn-neo:hover{
+    border-radius: 50%;
+    background: linear-gradient(145deg, #d4d4d4, #fdfdfd);
+    box-shadow:  9px 9px 16px #bababa,
+                -9px -9px 16px #ffffff;
+    height: 55px;
+    width: 55px;
+}
+
+figure{
+
+}
+img{
+    max-width: 100%;
+    filter: blur(5px) grayscale(1);
+    transition: all 0.3s ease-in;
+}
+
+.card:hover img{
+    /* Quien modifica su valor es la img cuando se pasa el mouse por encima del .card */
+    filter: blur(0) grayscale(0);
+    transform: translate(0px,-5px) scale(0.9) rotate(15deg);
+    /* TAREA
+    Averiguar sobre
+    perspective
+    rotate
+    otros... */
+}
+
+/* TENDENCIAS
+    El ano pasado se usaba NEOMORPHISM
+    Este ano se usa GLASS MORPHISM */

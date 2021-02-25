@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #222;
+}
+
+.cuadrado{
+    height: 150px;
+    width: 150px;
+    border: 1px solid red;
+}
+
+.cuadrado:nth-child(1){
+    position: relative;
+    /* position: relative  ---> Prepara al elemento que este disponible para empezar a moverse o cambiar de posicion */
+    /* Solo se puede mover desde top y left */
+    top: 10px;
+    /* Centra el cuadrado, necesita una dimension fija */
+    left: calc(50% - 75px);
+}
+.cuadrado:nth-child(2){
+    border: 1px solid yellow;
+    position: relative;
+    /* Artificio para centrar sin tener la dimension fija 
+    La propiedad transform translate 50% toma el ancho del elemento (de si mismo)
+    left toma el 50% del ancho disponible*/
+    left: 50%;
+    transform: translate(-50%,0);
+}
+
+.padre_absoluto{
+    border: 1px solid white;
+    position: relative;
+}
+
+.hijo_absoluto{
+    width: 150px;
+    height: 150px;
+    border: 1px solid pink;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* Cuando se usa la posicion absoluta es necesario indicar al menos dos anclas para que el elemento se mueva (top, bottom, left, right) */
+    /* Su ancla en top 0 no respeta a su elemento padre si el padre no tiene un sistema de posicionamiento establecido
+        Lo recomendable para un elemento absoluto es que su padre tenga posicionamiento relativo (para que se mueva dentro del padre)
+        Los elementos hermanos ocupan la posicion de un elemento absoluto */
+}
+
+.hijo_relativo{
+    width: 150px;
+    height: 150px;
+    border: 1px solid green;
+    /* position: absolute; */
+    /* top: 0;
+    left: 0; */
+}

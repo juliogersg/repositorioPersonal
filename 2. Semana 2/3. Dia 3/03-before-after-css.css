@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #222;
+    color: #f4f4f4;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+.parrafo1::before{
+    content: "++";
+}
+
+.parrafo1::after{
+    content: "<3";
+}
+
+.parrafo2{
+
+}
+
+.parrafo2::before{
+    content: "";
+    background-color: yellow;
+    transform: rotate(45deg);
+    width: 5px;
+    height: 5px;
+    display: inline-block;
+}
+
+/* After y before usan posicionamiento inline
+no se puede settear width ni heigh 
+se arregla con inline-block*/
+
+.link{
+    color: #fcfcfc;
+    text-decoration: none;
+    position: relative;
+}
+
+.link::before{
+    content: "";
+    /* Content es obligatorio en los before y after */
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    border-bottom: 2px solid yellow;
+    transition: width 0.2s ease-in;
+}
+
+.link:hover::before{
+    width: 100%;
+    /* Este estilo se aplicara cuando el mouse pase por encima del elemento link pero los cambios seran afectados al elemento before */
+}
+
+.card{
+    /* height: 150px; */
+    width: 300px;
+    margin-top: 20px;
+    background-color: black;
+    border-radius: 15px;
+    position: relative;
+    padding: 10px 14px;
+}
+
+.card::before{
+    content: "";
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(#ff7300,#ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    z-index: -2;
+    border-radius: 15px;
+}
+
+.card h3{
+    background: linear-gradient(#ff7300,#ff0000);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
