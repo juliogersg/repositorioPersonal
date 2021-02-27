@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* #1194F6
+    #BADEFC */
+body{
+    min-height: 100vh;
+    display: flex;
+}
+
+.sectionLeft,
+.sectionRight{
+    flex: 1;
+}
+.sectionLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    /* gap es la distancia que habra en el eje principal entre todos los hijos flexibles */
+}
+.logo{
+    /* margin-bottom: 40px; */
+    /* Ya no se necesita porque se remplaza por el gap en el sectionLeft */
+}
+.sectionRight{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.description{
+    max-width: 300px;
+}

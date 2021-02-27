@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #222;
+}
+.padre{
+    width: 600px;
+    height: 600px;
+    background-color: white;
+}
+.hijo1{
+    width: 100px;
+    background-color: yellow;
+    height: 100%;
+    display: inline-block;
+}
+.hijo2{
+    width: 500px;
+    height: 100%;
+    background-color: orange;
+    display: inline-block;
+}
+/* No esta bien utilizar inline-block para posicionar elementos en la pantalla */

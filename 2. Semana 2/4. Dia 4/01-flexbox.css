@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #222;
+    color: white;
+}
+.contenedor{
+    border: 1px solid yellow;
+    display: flex;
+    height: 600px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/* En un flex, todos los hijos dentro del padre se posicionan en linea (Todos dentro de una sola fila sin salir del padre)
+    La propiedad flex-direction:row es una propiedad por defecto cuando un padre es de tipo flex
+        Que significa?
+        DEPENDE!!!
+    La propiedad flex-wrap:nowrap es una propiedad por defecto y significa que los hijos no colapsan incluso si necesitaran mas espacio del que tienen disponibles
+        Cuales son los ejes principales y secundarios?
+        DEPENDE
+            - Cuando flex-direction: row; Eje principal: x Eje secundario: y
+            - Cuando flex-direction: column; Eje principal: y Eje secundario x
+    La propiedad justify-content alinea los elementos en el eje principal
+    La propiedad aling-items alinea los elementos en el eje secundario */
+.contenedor > div{
+    border: 1px solid ;
+}
+.hijo-1{
+    width: 250px;
+    height: 100px;
+    /* flex-grow: ; */
+    /* flex: 2; */
+}
+.hijo-2{
+    /* width: 50px; */
+    height: 100px;
+    /* flex-grow: ; */
+    flex: 1;
+}
+.hijo-3{
+    /* width: 50px; */
+    height: 100px;
+    /* flex-grow: ; */
+    flex: 1;
+}
+.hijo-4{
+    /* width: 50px; */
+    height: 100px;
+    /* flex-grow: ; */
+    flex: 1;
+}
