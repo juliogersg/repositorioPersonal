@@ -1,0 +1,168 @@
+*{
+margin:0;
+box-sizing:border-box;
+padding:0;
+}
+.header{
+    height: 60px;
+    background-color: #f06060;
+}
+.header__wrapper{
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.header__list{
+    display: flex;
+    list-style: none;
+    gap: 32px;    
+}
+/* li + li{margin-right: 10px} 
+    Este es un truco para dar un espacio entre elementos contiguos
+    solo se aplica a los elementos que tengan un igual al lado. El ultimo no se afecta*/
+
+.header__link{
+    text-decoration: none;
+    color: #332e23;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    /* uppercase pone todo en mayusculas */
+    font-weight: 600;
+}
+.header__logo{
+    /* background-color: #fff; */
+}
+.btn__menu{
+    outline: none;
+    padding: 10px 10px;
+    border: 1px solid #332e23;
+    color: #332e23;
+    background-color: transparent;
+    border-radius: 2px;
+    display: none;
+}
+
+/* Opcion 01 sin transicion */
+/* @media(max-width: 768px){
+    .header__nav{
+        display: none;
+        /* Con display none, el elemento ya no se muestra en pantalla*/
+    /* }
+    .btn__menu{
+        display: unset;
+    }
+    .header__wrapper.open{
+        flex-wrap: wrap;
+        padding: unset;
+    }
+    .header__wrapper.open .header__nav{
+        width: 100%;
+        display: unset;
+    }
+    .header__wrapper.open .header__list{
+        flex-direction: column;
+        gap: unset;
+    }
+    .header__wrapper.open .header__list li{
+        padding: 5px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: #f06060;
+        text-align: center;
+    }
+    .header__wrapper.open .header__logo{
+        padding-left: 20px;
+    }
+    .header__wrapper.open .btn__menu{
+        margin-right: 20px;
+    }
+} */
+
+/* Opcion 02 con transicion */
+/* @media (max-width: 768px) {
+	.header__nav {
+		width: 100%;
+		transform: translateY(-280px);
+		transition: all 0.5s ease-in;
+	}
+	.header__list {
+		flex-direction: column;
+		gap: unset;
+	}
+	.header__list li {
+		padding: 5px;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+		background-color: #f06060;
+		text-align: center;
+	}
+	.header__wrapper {
+		flex-wrap: wrap;
+		padding-top: 10px;
+	}
+	.header__wrapper.open {
+		padding: unset;
+	}
+	.btn__menu {
+		display: unset;
+	}
+	.header__wrapper.open .header__nav {
+		transform: translateY(0);
+	}
+	.header__wrapper.open .header__logo {
+		padding-left: 20px;
+		min-height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.header__wrapper.open .btn__menu {
+		margin-right: 20px;
+	}
+} */
+
+/* Opcion 03 con transicion mejorada */
+@media (max-width: 768px) {
+    .header__nav {
+        width: 100%;
+        transform: translateY(-280px);
+        transition: all 0.5s ease-in;
+    }
+    .header__list {
+        flex-direction: column;
+        gap: unset;
+    }
+    .header__list li {
+        padding: 5px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: #F06060;
+        text-align: center;
+    }
+    .header__wrapper {
+        flex-wrap: wrap;
+        padding-top: 10px;
+        padding: unset;
+    }
+    .header__wrapper.open {
+        /* padding: unset; */
+    }
+    .btn__menu {
+        display: unset;
+    }
+    .header__wrapper.open .header__nav {
+        transform: translateY(0);
+        /* transition: all 0.5s ease-in; */
+    }
+    .header__wrapper .header__logo {
+        padding-left: 20px;
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header__wrapper .btn__menu {
+        margin-right: 20px;
+    }
+}
