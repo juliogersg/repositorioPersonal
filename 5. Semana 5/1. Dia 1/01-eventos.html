@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        body {
+            padding-top: 100px;
+            background-color: #ddd;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        form>div input,
+        form>div select{
+            width: 100%;
+            padding: 10px;
+            margin: 5px auto;
+            border-radius: 3px;
+        }
+        .error-input{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <form action="" id="formulario">
+        <div>
+            <label for="inputNombre">Nombre:</label>
+            <input type="text" placeholder="Ingrese su nombre" id="inputNombre" name="nombre">
+        </div>
+        <div>
+            <label for="inputApellido">Apellido:</label>
+            <input type="text" placeholder="Ingrese su apellido" id="inputApellido" name="apellido">
+        </div>
+        <div>
+            <label for="inputEmail">Email:</label>
+            <input type="text" placeholder="Ingrese su email" id="inputEmail" name="email">
+        </div>
+        <div>
+            <label for="">Seleccione pais</label>
+            <select name="" id="selectPais"></select>
+        </div>
+        <div>
+            <label for="">Seleccione departamento</label>
+            <select name="" id="selectDepartamento" disabled></select>
+        </div>
+        <button type="submit">Enviar datos</button>
+        <button type="button">Cancelar acciones</button>
+        <!-- si no definimos el rol del button va a ser de tipo submit por defecto 
+        los eventos no son del button sino del form-->
+        <small><a href="https://www.google.com">Olvide mi contraseña</a></small>
+    </form>
+
+    <script src="./01-eventos.js"></script>
+</body>
+
+</html>
