@@ -1,0 +1,18 @@
+1.vista__principal
+2.categorias
+3.vista__principal
+4.vista__detalle__producto
+5.tienda__especifica
+6.vista__carrito
+7.lista__deseos
+8.vista__vende__nosotros
+9.registro__tienda
+10.vista__confirmacion del registro
+11.panel__principal
+12.crud__productos
+13.panel__principal
+14.editar__perfil
+15.panel__principal
+16.balance__ventas
+
+

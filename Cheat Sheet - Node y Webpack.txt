@@ -1,0 +1,7 @@
+NODE JS
+npm init -y		iniciar proyecto node
+npm install libraryName		instalar una libreria
+npm install webpack webpack-cli --save-dev		instalar webpack. --save-dev Es un comando de npm para instalar librerias en modo desarrollo mas no produccion
+npx webpack		ejecutar un comando que no esta instalado en nuestra pc, pero esta instalado en el proyecto (webpack)
+npx webpack -w		permite que se ejecute cada vez que guardo, ya no necesito ejecutarlo manual (para detener ctrl+c)
+cli	es un command line interpreter

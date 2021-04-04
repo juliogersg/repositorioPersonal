@@ -1,0 +1,17 @@
+{
+  "name": "01-node-proyecto",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "01-index.js",
+  "scripts": {
+    "start": "node 01-index.js",
+    "iniciar": "node 01-index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
