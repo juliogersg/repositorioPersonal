@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Header from './components/Header';
 import Noticias from './components/Noticias';
 import { getNewsByTag } from './services/services';
@@ -7,23 +7,41 @@ const App = () => {
 
     const [noticias, setNoticias] = useState([]);
     const [busqueda, setBusqueda] = useState('');
-    const refInputBusqueda = useRef();
+    const [cargando, setCargando] = useState(false);
 
-    useEffect(()=>{
-        if(busqueda === ''){
+    useEffect(() => {
+        if (busqueda === '') {
             return;
         }
-        getNewsByTag(busqueda).then(rpta=>{
+        setCargando(true);
+        getNewsByTag(busqueda).then(rpta => {
             setNoticias(rpta.data.articles);
         });
-    },[busqueda]);
+        setCargando(false);
+    }, [busqueda]);
 
     return (
         <>
-        <Header/>
-        <main className='container'>
-            <Noticias />
-        </main>
+            <Header setBusqueda={setBusqueda} />
+            <main className='container'>
+                {
+                    cargando
+                        ?
+                        (<div className='alert alert-primary mt-5'>
+                            <h3>Cargando...</h3>
+                            <p>Cargando resultados</p>
+                        </div>)
+                        :
+                        noticias.length === 0
+                        ?
+                        (<div className='alert alert-info mt-5'>
+                            <h3>Ups!</h3>
+                            <p>No tenemos noticias para mostrar, intenta buscar una</p>
+                        </div>)
+                        :
+                        <Noticias noticias={noticias} />
+                }
+            </main>
         </>
     )
 }
